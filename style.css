@@ -1,38 +1,47 @@
-
-/* Allgemeines Design */
+/* Grundgestaltung für alle Seiten */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f0f7f0;
     color: #222222;
+    line-height: 1.6;
 }
 
 /* Kopfbereich */
 header {
-    background-color: #26734d;/*26734d,0A0D67*/
+    background-color: #26734d;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 30px 15px;
 }
 
-/* Navigation */
+header h1 {
+    margin-bottom: 8px;
+}
+
+/* Navigationsleiste */
 nav {
     background-color: #184d33;
     text-align: center;
-    padding: 15px;
+    padding: 15px 10px;
 }
 
 nav a {
+    display: inline-block;
     color: white;
     text-decoration: none;
-    margin: 15px;
+    margin: 5px 12px;
 }
 
-/* Inhaltsbereiche */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hauptinhalt */
 main {
     max-width: 800px;
-    margin: auto;
-    padding: 20px;
+    margin: 25px auto;
+    padding: 0 20px;
 }
 
 section {
@@ -42,9 +51,12 @@ section {
     border-radius: 8px;
 }
 
-/* Überschriften */
 h2 {
     color: #26734d;
+}
+
+li {
+    margin-bottom: 8px;
 }
 
 /* Fußbereich */
@@ -55,3 +67,18 @@ footer {
     padding: 15px;
 }
 
+footer a {
+    color: white;
+}
+
+/* Anpassung für kleine Bildschirme */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+}
